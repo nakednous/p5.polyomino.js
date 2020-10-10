@@ -1,5 +1,3 @@
-// The key is to remember, arrayName[rowIndex][columnIndex]
-
 const ROWS = 20;
 const COLS = 10;
 const LENGTH = 20;
