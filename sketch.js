@@ -11,7 +11,7 @@ var d = '#b58900';
 var e = '#770811';
 var f = '#f40202';
 var g = '#fdf6e3';
-var enablePolyominoDrawing = false;
+var enablePolyominoDrawing = true;
 
 var H;
 
@@ -40,7 +40,7 @@ function draw() {
   background('#060621');
   drawTableau();
   if (enablePolyominoDrawing) {
-    drawPolyomino(H, 2, 4, LENGTH);
+    drawPolyomino(H, 2, 4, LENGTH, 5, 5);
   }
 }
 

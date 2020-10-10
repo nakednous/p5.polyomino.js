@@ -71,16 +71,20 @@ class Polyomino {
     return new Polyomino(color2D);
   };
 
-  p5.prototype.drawPolyomino = function(polyomino, row, col, LENGTH = 10) {
+  p5.prototype.drawPolyomino = function(polyomino, row, col, LENGTH = 10, outline = '#e9783d', outlineWeight = 2) {
     push();
     translate(row * LENGTH, col * LENGTH);
-    strokeWeight(2);
+    strokeWeight(outlineWeight);
+    stroke(outline);
     for (let i = 0; i < polyomino.color2D.length; i++) {
       for (let j = 0; j < polyomino.color2D[i].length; j++) {
-        push();
-        fill(polyomino.color2D[i][j]);
-        rect(j * LENGTH, i * LENGTH, LENGTH, LENGTH);
-        pop();
+        // handles both zero and empty (undefined) entries as well
+        if (polyomino.color2D[i][j]) {
+          push();
+          fill(polyomino.color2D[i][j]);
+          rect(j * LENGTH, i * LENGTH, LENGTH, LENGTH);
+          pop();
+        }
       }
     }
     pop();
