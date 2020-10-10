@@ -34,11 +34,11 @@ class Polyomino {
      * @param {Array} memory2D buffer[rows][cols]
      * @param {number} x memory2D row index
      * @param {number} y memory2D column index
-     * @throws 'No row' and 'Out-of-bounds' memoery2D reading exceptions
-     * @returns { Array, boolean } { Buffer, Override result } object literal
+     * @throws 'No row' and 'Out-of-bounds' memory2D reading exceptions
+     * @returns { Array, number } { buffer, memoryHitCounter } object literal
      */
     update(memory2D, x, y) {
-      let override = false;
+      let memoryHitCounter = 0;
       // i. clone memory
       let buffer = memory2D.map(arr => { return arr.slice(); });
       for (let i = 0; i < this._shape.length; i++) {
@@ -53,14 +53,14 @@ class Polyomino {
           if (this._shape[i][j]) {
             // iii. check if returned buffered overrides memory2D
             if (buffer[x + i][y + j] !== 0) {
-              override = true;
+              memoryHitCounter ++;
             }
             buffer[x + i][y + j] = this._shape[i][j];
           }
         }
       }
-      // iv. return buffer and result
-      return { buffer, override };
+      // iv. return buffer and memory hit counter
+      return { buffer, memoryHitCounter };
     }
   }
 

@@ -11,6 +11,7 @@ var d = '#b58900';
 var e = '#770811';
 var f = '#f40202';
 var g = '#fdf6e3';
+var enablePolyominoDrawing = false;
 
 var H;
 
@@ -38,7 +39,20 @@ function setup() {
 function draw() {
   background('#060621');
   drawTableau();
-  drawPolyomino(H, 2, 4, LENGTH);
+  if (enablePolyominoDrawing) {
+    drawPolyomino(H, 2, 4, LENGTH);
+  }
+}
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    H.reflect();
+  } else if (keyCode === DOWN_ARROW) {
+    H.rotate();
+  }
+  if (key === 'd') {
+    enablePolyominoDrawing = !enablePolyominoDrawing;
+  }
 }
 
 function drawTableau() {
