@@ -78,6 +78,11 @@
   ],
   "components": [
     {
+      "name": "GithubSearch",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/misc/github/search.js",
+      "hash": "gqyd3rK3F584/LnJsjq4UQ=="
+    },
+    {
       "name": "ToCToggle",
       "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toggle/index.js",
       "hash": "8MYpjbXGFidHuRMjglbCuA=="
