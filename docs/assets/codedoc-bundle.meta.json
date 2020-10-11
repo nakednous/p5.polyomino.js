@@ -1,0 +1,101 @@
+{
+  "init": [
+    {
+      "name": "initJssCs",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/transport/setup-jss.js",
+      "hash": "nW+kecLhS6t6SPPb5Xt8LA=="
+    },
+    {
+      "name": "installTheme",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/content/theme.ts",
+      "hash": "8EShIcOeFPzhQxpLjtK5Pw=="
+    },
+    {
+      "name": "codeSelection",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/selection.js",
+      "hash": "yNK/xKiOPjuPiQwZCmFzLA=="
+    },
+    {
+      "name": "sameLineLengthInCodes",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/same-line-length.js",
+      "hash": "Z71uLDX/klIZXTPJaLicWA=="
+    },
+    {
+      "name": "initHintBox",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-hint/index.js",
+      "hash": "TAf3zb04RQkUM2ZeLoh1/g=="
+    },
+    {
+      "name": "initCodeLineRef",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-ref/index.js",
+      "hash": "Ts4pMCUqvQyqWLmSseu7pA=="
+    },
+    {
+      "name": "initSmartCopy",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/smart-copy.js",
+      "hash": "QKpLmzZRhthZ3B++gfaK2g=="
+    },
+    {
+      "name": "copyHeadings",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/heading/copy-headings.js",
+      "hash": "h2tFRZiVp4QgkML1m/A7Jg=="
+    },
+    {
+      "name": "contentNavHighlight",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/contentnav/highlight.js",
+      "hash": "8GcRf6HD9RslZ7Cf+hb7hw=="
+    },
+    {
+      "name": "loadDeferredIFrames",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/transport/deferred-iframe.js",
+      "hash": "oC1du0kD42dDXfjgT+hh5g=="
+    },
+    {
+      "name": "smoothLoading",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/transport/smooth-loading.js",
+      "hash": "r95HgoecHRvbobSI0s+0zA=="
+    },
+    {
+      "name": "tocHighlight",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toc-highlight.js",
+      "hash": "KjHgwAb76yVaJbQ0mlWUpA=="
+    },
+    {
+      "name": "postNavSearch",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/search/post-nav/index.js",
+      "hash": "sVOdLOhLFg/pdboKCX2sUQ=="
+    },
+    {
+      "name": "copyLineLinks",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-links/copy-line-link.js",
+      "hash": "gNeafhRpCVnbdEjUFLqjvQ=="
+    },
+    {
+      "name": "gatherFootnotes",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/footnote/gather-footnotes.js",
+      "hash": "YZDLq54CNvaF1c4EuzUggg=="
+    }
+  ],
+  "components": [
+    {
+      "name": "ToCToggle",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toggle/index.js",
+      "hash": "8MYpjbXGFidHuRMjglbCuA=="
+    },
+    {
+      "name": "DarkModeSwitch",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/components/darkmode/index.js",
+      "hash": "31FkKyJpvA9qpfynv+Jo1g=="
+    },
+    {
+      "name": "ConfigTransport",
+      "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/transport/config.js",
+      "hash": "LuZSMoqU5T1NdzXekvIQVw=="
+    }
+  ],
+  "renderer": {
+    "name": "getRenderer",
+    "filename": "/home/runner/work/p5.polyomino.js/p5.polyomino.js/.codedoc/node_modules/@codedoc/core/dist/es6/transport/renderer.js",
+    "hash": "Z3skUmIRME9RhvimxLsAqw=="
+  }
+}
