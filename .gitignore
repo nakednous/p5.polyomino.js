@@ -1,2 +1,5 @@
 .codedoc/node_modules/
 .vscode/
+docs/assets/
+*.html
+docs/*.html
