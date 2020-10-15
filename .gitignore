@@ -1,6 +1,9 @@
 # IDEs
 .vscode/
 
+# codedoc
+dist/
+
 # dependencies
 libraries/*
 !libraries/p5.polyomino.js

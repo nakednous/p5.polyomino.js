@@ -38,7 +38,7 @@ function draw() {
   background('#060621');
   drawTableau();
   if (enablePolyominoDrawing) {
-    drawPolyomino(H, 2, 4, LENGTH, 2, 205);
+    drawPolyomino(H, 2, 4, LENGTH, 2, b);
   }
 }
 
