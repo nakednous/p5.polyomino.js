@@ -2,13 +2,6 @@ const ROWS = 20;
 const COLS = 10;
 const LENGTH = 20;
 var tableau;
-var a = '#ff007d';
-var b = '#229b32';
-var c = '#007acc';
-var d = '#b58900';
-var e = '#770811';
-var f = '#f40202';
-var g = '#fdf6e3';
 var enablePolyominoDrawing = true;
 
 var H;
@@ -25,20 +18,27 @@ var H;
 
 function setup() {
   createCanvas(COLS * LENGTH, ROWS * LENGTH);
+  var a = color('#ff007d');
+  var b = color('#229b32');
+  var c = color('#007acc');
+  var d = color('#b58900');
+  var e = color('#770811');
+  var f = color('#f40202');
+  var g = color('#fdf6e3');
   H = createPolyomino([[a, b, 0, 0, b, a],
-                       [c, d, 0, 0, d, c],
-                       [e, f, a, b, e, f],
-                       [a, e, b, a, e, a],
-                       [g, d, 0, 0, d, g],
-                       [c, f, 0, 0, f, c],
-                      ]);
+  [c, d, 0, 0, d, c],
+  [e, f, a, b, e, f],
+  [a, e, b, a, e, a],
+  [g, d, 0, 0, d, g],
+  [c, f, 0, 0, f, c],
+  ]);
 }
 
 function draw() {
   background('#060621');
   drawTableau();
   if (enablePolyominoDrawing) {
-    drawPolyomino(H, 2, 4, LENGTH, 2, b);
+    drawPolyomino(H, 2, 4, LENGTH, 2, 'blue');
   }
 }
 
@@ -92,8 +92,6 @@ function clearTableau() {
     }
   }
 }
-
-var Z = new Polyomino([[a, b, c, 0], [0, d, e, f]]);
 
 function debugPolyomino(polyomino) {
   console.log(polyomino.color2D);
