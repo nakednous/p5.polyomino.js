@@ -96,5 +96,5 @@ function clearTableau() {
 var Z = new Polyomino([[a, b, c, 0], [0, d, e, f]]);
 
 function debugPolyomino(polyomino) {
-  console.log(polyomino.shape);
+  console.log(polyomino.color2D);
 }
