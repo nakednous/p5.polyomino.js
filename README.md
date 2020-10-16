@@ -2,9 +2,7 @@
 
 [p5.js](https://p5js.org/) library to create, draw and handle [polyominos](https://en.wikipedia.org/wiki/Polyomino).
 
-## Usage
-
-### Polyomino p5.js functions
+## Polyomino p5.js functions
 
 A polyomino is created from a 2D _shape_ array which may contain any combination of [p5 colors](https://p5js.org/reference/#/p5.Color), chars and [emojis](https://emojipedia.org/), using the `createPolyomino` command:
 
@@ -43,9 +41,9 @@ function draw() {
 
 See [this example](https://github.com/nakednous/p5.polyomino.js/blob/master/examples/mixed/sketch.js).
 
-### Polyomino methods
+## Polyomino methods
 
-The `reflect()` and `rotate()` methods reflects and rotates the polyomino, resp:
+Use the `reflect()` and `rotate()` polyomino methods to transform it:
 
 ```js
 function keyPressed() {
@@ -57,7 +55,9 @@ function keyPressed() {
 }
 ```
 
-Access the polyomino array `shape` property to read it or write it. For instance `console.log(polyomino.shape)` will write to the console the polyomino shape.
+Use the polyomino `shape` property ro set /get the polyomino shape array. For instance `console.log(polyomino.shape)` will write to the console the polyomino shape array.
+
+Use the polyomino `update(memory2D, x, y)` to check `memory2D` collisions. 
 
 
 
