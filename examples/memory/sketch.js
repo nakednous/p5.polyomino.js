@@ -94,5 +94,5 @@ function clearTableau() {
 }
 
 function debugPolyomino(polyomino) {
-  console.log(polyomino.color2D);
+  console.log(polyomino.shape);
 }

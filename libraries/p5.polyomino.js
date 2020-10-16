@@ -1,16 +1,16 @@
 class Polyomino {
   /**
-   * @param {Array} color2D[rowIndex][columnIndex]
+   * @param {Array} shape[rowIndex][columnIndex]
    */
-  constructor(color2D) {
-    this._shape = color2D;
+  constructor(shape) {
+    this._shape = shape;
   }
 
-  set color2D(color2D) {
-    this._shape = color2D;
+  set shape(shape) {
+    this._shape = shape;
   }
 
-  get color2D() {
+  get shape() {
     return this._shape;
   }
 
@@ -67,8 +67,8 @@ class Polyomino {
 // Details here:
 // https://github.com/processing/p5.js/blob/main/contributor_docs/creating_libraries.md
 (function () {
-  p5.prototype.createPolyomino = function (color2D) {
-    return new Polyomino(color2D);
+  p5.prototype.createPolyomino = function (shape) {
+    return new Polyomino(shape);
   };
 
   p5.prototype.drawPolyomino = function (polyomino, row, col, LENGTH = 10, outlineWeight = 2, outline = '#e9783d') {
@@ -76,18 +76,18 @@ class Polyomino {
     translate(row * LENGTH, col * LENGTH);
     stroke(outline);
     strokeWeight(outlineWeight);
-    for (let i = 0; i < polyomino.color2D.length; i++) {
-      for (let j = 0; j < polyomino.color2D[i].length; j++) {
+    for (let i = 0; i < polyomino.shape.length; i++) {
+      for (let j = 0; j < polyomino.shape[i].length; j++) {
         // handles both zero and empty (undefined) entries as well
-        if (polyomino.color2D[i][j]) {
+        if (polyomino.shape[i][j]) {
           push();
-          if (polyomino.color2D[i][j] instanceof p5.Color) {
-            fill(polyomino.color2D[i][j]);
+          if (polyomino.shape[i][j] instanceof p5.Color) {
+            fill(polyomino.shape[i][j]);
             rect(j * LENGTH, i * LENGTH, LENGTH, LENGTH);
           }
-          else if (typeof polyomino.color2D[i][j] === 'string') {
+          else if (typeof polyomino.shape[i][j] === 'string') {
             textSize(LENGTH);
-            text(polyomino.color2D[i][j], j * LENGTH, i * LENGTH, LENGTH, LENGTH);
+            text(polyomino.shape[i][j], j * LENGTH, i * LENGTH, LENGTH, LENGTH);
           }
           pop();
         }
