@@ -4,7 +4,7 @@
 
 ## Polyomino p5.js functions
 
-A polyomino is created from a 2D _shape_ array which may contain any combination of [p5 colors](https://p5js.org/reference/#/p5.Color), chars and [emojis](https://emojipedia.org/), using the `createPolyomino` command:
+A polyomino is created from a 2D array _shape_ which may contain any combination of [p5 colors](https://p5js.org/reference/#/p5.Color), chars and [emojis](https://emojipedia.org/), using the `createPolyomino` command:
 
 ```js
 const ROWS = 20;
@@ -37,7 +37,7 @@ See [this example](https://github.com/nakednous/p5.polyomino.js/blob/master/exam
 
 ## Polyomino methods
 
-The `reflect()` and `rotate()` transforms the polyomino.
+The `reflect()` and `rotate()` geometrically transforms the polyomino.
 
 ```js
 function keyPressed() {
@@ -49,8 +49,8 @@ function keyPressed() {
 }
 ```
 
-See the same above [example](https://github.com/nakednous/p5.polyomino.js/blob/master/examples/glyphs/sketch.js).
+See the same [example](https://github.com/nakednous/p5.polyomino.js/blob/master/examples/glyphs/sketch.js) as above.
 
-The `shape` property to set (get) the polyomino shape array.
+The `shape` property reads (and writes) the polyomino 2D array shape.
 
-The `update(memory2D, x, y)` method checks collisions against the `memory2D` array, without modifying it. It throws 'No row' and 'Out-of-bounds' memory2D reading exceptions and returns a `{ buffer, memoryHitCounter }` object literal, where `buffer` is a copy of the `memory2D` array after adding the polyomino at position `(x, y)` and `memoryHitCounter` counts the `memory2D` number of cells hit by the polyomino.
+The `update(memory2D, x, y)` method checks the polyomino for collisions against the `memory2D` array which free cells should be `0`. It throws 'No row' and 'Out-of-bounds' memory2D reading exceptions and returns a `{ buffer, memoryHitCounter }` object literal, where `buffer` is a copy of the `memory2D` array after adding the polyomino at position `(x, y)` and `memoryHitCounter` counts the `memory2D` number of cells hit by the polyomino. Good for [tile-matching videogames](https://en.wikipedia.org/wiki/Tile-matching_video_game).
