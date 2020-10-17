@@ -51,6 +51,8 @@ function keyPressed() {
 
 See the same [example](https://github.com/nakednous/p5.polyomino.js/blob/master/examples/glyphs/sketch.js) as above.
 
+<!-- Write your comments here -->
 The `shape` property reads (and writes) the polyomino 2D array shape.
 
-The `update(memory2D, x, y)` method checks the polyomino for collisions against the `memory2D` array which free cells should be `0`. It throws 'No row' and 'Out-of-bounds' memory2D reading exceptions and returns a `{ buffer, memoryHitCounter }` object literal, where `buffer` is a copy of the `memory2D` array after adding the polyomino at position `(x, y)` and `memoryHitCounter` counts the `memory2D` number of cells hit by the polyomino. Good for [tile-matching videogames](https://en.wikipedia.org/wiki/Tile-matching_video_game).
+The `update(memory2D, x, y)` method checks the polyomino for collisions against the `memory2D` array having free cells as `0`. It throws 'No row' and 'Out-of-bounds' memory2D reading exceptions and returns a `{ buffer, memoryHitCounter }` object literal, where `buffer` is a copy of the `memory2D` array after adding the polyomino at position `(x, y)`, and `memoryHitCounter` counts the `memory2D` number of cells hit by the polyomino. Good for [tile-matching videogames](https://en.wikipedia.org/wiki/Tile-matching_video_game).
+-->
