@@ -10,40 +10,34 @@ A polyomino is created from a 2D _shape_ array which may contain any combination
 const ROWS = 20;
 const COLS = 10;
 const LENGTH = 20;
-var a = '🙈'
-var b = '👽';
-var c = '🤔';
-var d = '#b58900';
-var e = '#770811';
-var f = 'f'
-var g = 'g'
-var h = 'h'
 var polyomino;
 
 function setup() {
   createCanvas(COLS * LENGTH, ROWS * LENGTH);
-  polyomino = createPolyomino([[a, b,        0],
-                               [0, c, color(d)],
-                               [0, 0, color(e)],
-                               [f, g, h]
+  polyomino = createPolyomino([[color('cyan'), '👽',             0    ],
+                               [0,             '🤔',            '🙈' ],
+                               [0,             color('#770811'), 0   ],
+                               ['g',           'o',             'l'  ]
                               ]);
 }
 ```
 
-Use `drawPolyomino(polyomino, row, col, LENGTH = 10, outlineWeight = 2, outline = '#e9783d')` to draw the polyomino:
+Use `drawPolyomino(polyomino, row, col)` to draw the polyomino:
 
 ```js
 function draw() {
   background('#060621');
+  // the last three params are optional and they set the polyomino
+  // length, strokeWeight and stroke visual properties
   drawPolyomino(polyomino, 2, 4, LENGTH, 2, 'green');
 }
 ```
 
-See [this example](https://github.com/nakednous/p5.polyomino.js/blob/master/examples/mixed/sketch.js).
+See [this example](https://github.com/nakednous/p5.polyomino.js/blob/master/examples/glyphs/sketch.js).
 
 ## Polyomino methods
 
-Use the `reflect()` and `rotate()` polyomino methods to transform it:
+The `reflect()` and `rotate()` transforms the polyomino.
 
 ```js
 function keyPressed() {
@@ -55,10 +49,8 @@ function keyPressed() {
 }
 ```
 
-Use the polyomino `shape` property ro set /get the polyomino shape array. For instance `console.log(polyomino.shape)` will write to the console the polyomino shape array.
+See the same above [example](https://github.com/nakednous/p5.polyomino.js/blob/master/examples/glyphs/sketch.js).
 
-Use the polyomino `update(memory2D, x, y)` to check `memory2D` collisions. 
+The `shape` property to set (get) the polyomino shape array.
 
-
-
-
+The `update(memory2D, x, y)` method checks collisions against the `memory2D` array, without modifying it. It throws 'No row' and 'Out-of-bounds' memory2D reading exceptions and returns a `{ buffer, memoryHitCounter }` object literal, where `buffer` is a copy of the `memory2D` array after adding the polyomino at position `(x, y)` and `memoryHitCounter` counts the `memory2D` number of cells hit by the polyomino.

@@ -71,7 +71,7 @@ class Polyomino {
     return new Polyomino(shape);
   };
 
-  p5.prototype.drawPolyomino = function (polyomino, row, col, LENGTH = 10, outlineWeight = 2, outline = '#e9783d') {
+  p5.prototype.drawPolyomino = function (polyomino, row, col, LENGTH = 10, outlineWeight = 2, outline = 'magenta') {
     push();
     translate(row * LENGTH, col * LENGTH);
     stroke(outline);
