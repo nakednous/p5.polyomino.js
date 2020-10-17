@@ -1,25 +1,22 @@
 const ROWS = 20;
 const COLS = 10;
 const LENGTH = 20;
-// See:
-// https://stackoverflow.com/questions/42315883/in-javascript-can-i-store-emojis-in-an-array-as-arrays-element
-// https://emojipedia.org/
-var a = [ '\u{1F984}' ];
-var b = '🙀';
-var c = '🤔';
-var d = '👽';
 var polyomino;
 
 function setup() {
   createCanvas(COLS * LENGTH, ROWS * LENGTH);
-  polyomino = createPolyomino([[a[0], b, c],
-                               [0,    0, d]
+  /*
+  polyomino = createPolyomino([[color('cyan'), '👽',             0    ],
+                               [0,             '🤔',            '🙈' ],
+                               [0,             color('#770811'), 0   ],
+                               ['g',           'o',             'l'  ]
                               ]);
+  // */
 }
 
 function draw() {
   background('#060621');
-  drawPolyomino(polyomino, 2, 4, LENGTH, 2, 'cyan');
+  drawPolyomino(polyomino, 2, 4, LENGTH, 2, 'red');
 }
 
 function keyPressed() {

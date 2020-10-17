@@ -1,10 +1,8 @@
 const ROWS = 20;
 const COLS = 10;
 const LENGTH = 20;
+var polyomino;
 var tableau;
-var enablePolyominoDrawing = true;
-
-var H;
 
 (() => {
   tableau = Array(ROWS);
@@ -18,39 +16,17 @@ var H;
 
 function setup() {
   createCanvas(COLS * LENGTH, ROWS * LENGTH);
-  var a = color('#ff007d');
-  var b = color('#229b32');
-  var c = color('#007acc');
-  var d = color('#b58900');
-  var e = color('#770811');
-  var f = color('#f40202');
-  var g = color('#fdf6e3');
-  H = createPolyomino([[a, b, 0, 0, b, a],
-  [c, d, 0, 0, d, c],
-  [e, f, a, b, e, f],
-  [a, e, b, a, e, a],
-  [g, d, 0, 0, d, g],
-  [c, f, 0, 0, f, c],
-  ]);
+  polyomino = createPolyomino([[color('cyan'), '👽',             0    ],
+                               [0,             '🤔',            '🙈' ],
+                               [0,             color('#770811'), 0   ],
+                               ['g',           'o',             'l'  ]
+                              ]);
+  glue(polyomino, 4, 2);
 }
 
 function draw() {
   background('#060621');
   drawTableau();
-  if (enablePolyominoDrawing) {
-    drawPolyomino(H, 2, 4, LENGTH, 2, 'blue');
-  }
-}
-
-function keyPressed() {
-  if (keyCode === UP_ARROW) {
-    H.reflect();
-  } else if (keyCode === DOWN_ARROW) {
-    H.rotate();
-  }
-  if (key === 'd') {
-    enablePolyominoDrawing = !enablePolyominoDrawing;
-  }
 }
 
 function drawTableau() {
@@ -59,12 +35,23 @@ function drawTableau() {
       if (tableau[i][j] !== 0) {
         push();
         translate(j * LENGTH, i * LENGTH);
-        fill(tableau[i][j]);
-        rect(0, 0, LENGTH, LENGTH);
+        if (tableau[i][j] instanceof p5.Color) {
+          fill(tableau[i][j]);
+          rect(0, 0, LENGTH, LENGTH);
+        }
+        else if (typeof tableau[i][j] === 'string') {
+          stroke('red');
+          textSize(LENGTH);
+          text(tableau[i][j], 0, 0, LENGTH, LENGTH);
+        }
         pop();
       }
     }
   }
+}
+
+function glue(polyomino, row, col) {
+  tableau = polyomino.update(tableau, row, col).buffer;
 }
 
 function update(polyomino, row, col) {
