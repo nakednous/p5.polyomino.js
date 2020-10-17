@@ -5,13 +5,11 @@ var polyomino;
 
 function setup() {
   createCanvas(COLS * LENGTH, ROWS * LENGTH);
-  /*
   polyomino = createPolyomino([[color('cyan'), '👽',             0    ],
                                [0,             '🤔',            '🙈' ],
                                [0,             color('#770811'), 0   ],
                                ['g',           'o',             'l'  ]
                               ]);
-  // */
 }
 
 function draw() {
